@@ -27,7 +27,7 @@ Minha meta é manter uma curva de aprendizado acelerada, sempre buscando aplicar
 **Ao Espaço e Além!**
 
 Este projeto foi desenvolvido com o objetivo de consolidar os conceitos de Programação Orientada a Objetos (POO) que venho estudando na Alura. Ele reflete minha capacidade de entrega rápida, aliada ao compromisso com a qualidade de software.
-Ele é um jogo de RPG com temática espacial com perguntas e respostas.
+Ele é um jogo de RPG com temática espacial de perguntas e respostas.
 
 **Linha do Tempo do Desenvolvimento**
 
