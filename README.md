@@ -34,8 +34,11 @@ Ele é um jogo de RPG com temática espacial com perguntas e respostas.
 Para garantir organização e foco, o projeto seguiu um cronograma rigoroso:
 
 **12/06 a 14/06** — Desenvolvimento Core
-Criação da estrutura do projeto;
-Desenvolvimento da lógica principal;
+
+Criação da estrutura do projeto.
+
+Desenvolvimento da lógica principal.
+
 Implementação dos conceitos de POO.
 
 **15/06 a 22/06** — Qualidade e Validação
