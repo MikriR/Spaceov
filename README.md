@@ -6,17 +6,17 @@ Iniciei minha transição para a área de Programação em maio de 2026, mantend
 Busco alinhar minha base acadêmica à prática diária do mercado, desenvolvendo competências técnicas sólidas e aplicáveis ao ambiente profissional.
 
 
-**-Curso Técnico**
+**• Curso Técnico**
 
 Iniciado em 02 de junho de 2026
 Desenvolvimento de Sistemas — SENAC EAD
 
 
-**-Estudos Intensivos (Alura)**
+**• Estudos Intensivos (Alura)**
 Dedicação diária desde 16 de maio de 2026
 
 
-**-Foco Atual**
+**• Foco Atual**
 
 Atualmente, estou com aproximadamente 50% de conclusão da formação Aplicando a Orientação a Objetos, da Alura, internalizando conceitos fundamentais como classes, herança, polimorfismo e encapsulamento.
 
@@ -28,6 +28,7 @@ Minha meta é manter uma curva de aprendizado acelerada, sempre buscando aplicar
 
 Este projeto foi desenvolvido com o objetivo de consolidar os conceitos de Programação Orientada a Objetos (POO) que venho estudando na Alura. Ele reflete minha capacidade de entrega rápida, aliada ao compromisso com a qualidade de software.
 Ele é um jogo de RPG com temática espacial com perguntas e respostas.
+
 **Linha do Tempo do Desenvolvimento**
 
 Para garantir organização e foco, o projeto seguiu um cronograma rigoroso:
@@ -84,7 +85,7 @@ Criação e organização de classes;
 Encapsulamento: proteção de dados sensíveis por meio de modificadores de acesso e métodos getters/setters;
 Collections (ArrayList): armazenamento e gerenciamento de dados de forma mais flexível e escalável.
 
-**-Como jogar**
+**• Como jogar**
 É um jogo rodado pelo terminal ou, se preferir, pelo prompt de comando.
 
 **1-** Baixe os arquivos deste repositório e abra na sua IDE.
