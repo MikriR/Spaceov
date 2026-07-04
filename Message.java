@@ -49,6 +49,7 @@ public class Message {
             }
         } catch (InterruptedException e) {
             System.out.println();
+            readerDatesUser.nextLine();
         }
     }
 
@@ -176,6 +177,7 @@ public class Message {
             }
         } catch (Exception e) {
             System.out.println();
+            readerDatesUser.nextLine();
         }
     }
 
