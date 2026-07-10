@@ -43,7 +43,8 @@ Período dedicado exclusivamente à refatoração, correção de bugs e realiza�
 **• Refatoração**
 - Separação das responsabilidades dos sistemas de exibição de mensagens e leitura de dados da classe GameHeart, transferindo essas funcionalidades para a classe Message e retornando as mensagens/textos para a classe GameHeart por meio de métodos.
 Aplicação do princípio Don't Repeat Yourself (DRY) para reduzir a repetição de estruturas else na classe GameHeart.
-Bugs Encontrados
+
+**Bugs Encontrados**
 
 **• Leitura de Dados**
 
