@@ -97,8 +97,7 @@ public class Message {
         hitAndMiss.add("A sua nave chegou a integridade 0 e não é mais possível continuarmos com a nossa viagem.");
         hitAndMiss.add("Fantástico! Você acertou a segunda pergunta.\n" +
                 "Com o seu acerto, você ganhou 25% de intregidade para a sua nave.");
-        hitAndMiss.add("A sua nave está com 100% de integridade e agora podemos viajar pelo espaço sem problemas. \n" + "\n" +
-                "KSSHHHH");
+        hitAndMiss.add("A sua nave está com 100% de integridade e agora podemos viajar pelo espaço sem problemas. \n");
         hitAndMiss.add("A integridade da sua nave está muito baixa e não poderemos seguir viagem.");
         hitAndMiss.add("""
                                          Escolha:
@@ -116,6 +115,7 @@ public class Message {
     }
 
     public static void exhibitHitAndMiss(int exhibitIndex) {
+        timing();
         String exhibitionResult = getHitAndMiss().get(exhibitIndex);
         System.out.println(exhibitionResult);
     }
@@ -150,11 +150,14 @@ public class Message {
     }
 
     public static void gasBallMessage() {
+        timing();
         System.out.println("Excelente!");
         System.out.println("Você respondeu corretamente que o Sol é uma Bola de Gás. \nE a próxima pergunta será mais fácil ainda \n");
     }
 
     public static void shipController() {
+        timing();
+        System.out.println("KSSHHHH\n");
         System.out.println("""
                                          Mensagem de Voz da Nave:
                         
@@ -167,6 +170,7 @@ public class Message {
     }
 
     public static String countDownPermission() {
+        timing();
         System.out.println(Questions.getGameQuestions().get(2));
         String permissionChoice = readerDatesUser.nextLine();
         return permissionChoice;
@@ -216,6 +220,7 @@ public class Message {
     }
 
     public static void sunDescription() {
+        timing();
         System.out.println("""               
                                     Este é o Sol!
                                     
@@ -230,5 +235,13 @@ public class Message {
                       uma pertubação nas órbitas. Mas como dito, é apenas uma lenda.
                             
                 """);
+    }
+
+    public static void timing(){
+        try{
+            Thread.sleep(2500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 }
