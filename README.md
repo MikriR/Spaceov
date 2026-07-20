@@ -87,6 +87,6 @@ Aplicação do princípio Don't Repeat Yourself (DRY) para reduzir a repetição
 **• Como jogar**
 É um jogo rodado pelo terminal ou, se preferir, pelo prompt de comando.
 
-- **1-** Baixe os arquivos deste repositório e abra na sua IDE.
+- **1-** Baixe os pacotes deste repositório e abra na sua IDE.
 - **2-** Se direcione para a Classe 'Main'.
 - **3-** Clique no botão **Run** e faça a sua viagem espacial.
