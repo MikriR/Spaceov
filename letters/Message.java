@@ -2,14 +2,13 @@ package br.com.letters;
 
 import br.com.several.Ship;
 import br.com.several.Universe;
+import br.com.user.User;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Message {
-    private static final Scanner readerDatesUser = new Scanner(System.in);
 
     public static int initialMessage() {
         System.out.println("Bem-vindo ao Spaceov \n");
@@ -20,26 +19,26 @@ public class Message {
     }
 
     public static int avoidInsertError(int indexChoices) {
-        while(true) {
+        while (true) {
             try {
                 System.out.println(hitAndMiss.get(indexChoices));
-                int choiceStart = readerDatesUser.nextInt();
-                readerDatesUser.nextLine();
+                int choiceStart = User.numberChoice();
+                User.bufferClean();
                 return choiceStart;
 
             } catch (InputMismatchException e) {
                 System.out.println("Por favor, escolha apenas números.\n");
-                readerDatesUser.nextLine();
+                User.bufferClean();
             }
         }
     }
 
     public static void asksAndShipOrbit() {
         System.out.println(Questions.getGameQuestions().get(3));
-        String choiceName = readerDatesUser.nextLine();
+        String choiceName = User.wordChoice();
 
         System.out.println(Questions.getGameQuestions().get(4));
-        String choiceShip = readerDatesUser.nextLine();
+        String choiceShip = User.wordChoice();
 
         int velocity = 40;
         String orbitMessage = "Na órbita da Terra está localizada a nave " + choiceShip + " com o seu piloto " + choiceName + ". \n" +
@@ -54,7 +53,7 @@ public class Message {
             }
         } catch (InterruptedException e) {
             System.out.println();
-            readerDatesUser.nextLine();
+            User.bufferClean();
         }
     }
 
@@ -79,7 +78,7 @@ public class Message {
         return avoidInsertError(6);
     }
 
-    public static void notYet () {
+    public static void notYet() {
         if (Ship.getShipIntegrity() <= 79) {
             System.out.println(Message.getHitAndMiss().get(5));
             System.out.println("Acertando ou errando a pergunta, a nave não chegará nas condições mínimas para viajarmos.");
@@ -90,6 +89,7 @@ public class Message {
     }
 
     private static ArrayList<String> hitAndMiss = new ArrayList<>();
+
     static {
         hitAndMiss.add("Muito bem! Os propulsores da " + Ship.getTypeShip().getFirst() + " foram ligados\n" +
                 "Com o seu acerto, você ganhou 25% de intregidade para a sua nave.\n");
@@ -122,7 +122,7 @@ public class Message {
 
     public static String exhibitQuestion(int questionIndex) {
         System.out.println(Questions.getGameQuestions().get(questionIndex));
-        String choiceQuestion = readerDatesUser.nextLine();
+        String choiceQuestion = User.wordChoice();
         return choiceQuestion;
     }
 
@@ -138,7 +138,7 @@ public class Message {
         notYet();
     }
 
-    public static void dropPercentageMessage () {
+    public static void dropPercentageMessage() {
         System.out.println("Atenção! A porcentagem da integridade da sua nave caiu para " + Ship.getShipIntegrity() + "%");
     }
 
@@ -159,20 +159,20 @@ public class Message {
         timing();
         System.out.println("KSSHHHH\n");
         System.out.println("""
-                                         Mensagem de Voz da Nave:
-                        
-                            Atenção a todos os tripulantes.
-                            Todos para seus assentos
-                            Estamos acionando os propulsores para a viagem.
-                        """);
+                                 Mensagem de Voz da Nave:
+                
+                    Atenção a todos os tripulantes.
+                    Todos para seus assentos
+                    Estamos acionando os propulsores para a viagem.
+                """);
 
-        System.out.println("Nosso destino será o " + Universe.getDestinos().getFirst() +  "\n");
+        System.out.println("Nosso destino será o " + Universe.getDestinos().getFirst() + "\n");
     }
 
     public static String countDownPermission() {
         timing();
         System.out.println(Questions.getGameQuestions().get(2));
-        String permissionChoice = readerDatesUser.nextLine();
+        String permissionChoice = User.wordChoice();
         return permissionChoice;
     }
 
@@ -186,7 +186,7 @@ public class Message {
             }
         } catch (Exception e) {
             System.out.println();
-            readerDatesUser.nextLine();
+            User.bufferClean();
         }
     }
 
@@ -197,7 +197,7 @@ public class Message {
 
     public static void countDown() {
         System.out.println("Atenção! Contagem regressiva começando.");
-        String[] countdown = {"10...","9...","8...","7...","6...","5...","4...","3...","2...","1...","0\n"};
+        String[] countdown = {"10...", "9...", "8...", "7...", "6...", "5...", "4...", "3...", "2...", "1...", "0\n"};
         typingMessages(countdown);
     }
 
@@ -205,15 +205,15 @@ public class Message {
         System.out.println("Uma viagem espacial é mágica!\n" +
                 "E por isso, aceitamos somente SIM como resposta.\n\n" +
                 Questions.getGameQuestions().get(2));
-        String permissionChoice = readerDatesUser.nextLine();
+        String permissionChoice = User.wordChoice();
         return permissionChoice;
     }
 
-    public static void toSun(){
+    public static void toSun() {
         System.out.println("Vwooooorp!");
         String[] distancies = {"Distância: 135.000.000 milhões de quilometros", "Distância: 100.000.000 milhões de quilometros",
                 "Distância: 55.000.000 milhões de quilometros", "Distância: 35.000.000 milhões de quilometros",
-                "Distância: 15.000.000 milhões de quilometros", "Distância: 6.000.000 milhões de quilometros \n","Em órbita! \n"};
+                "Distância: 15.000.000 milhões de quilometros", "Distância: 6.000.000 milhões de quilometros \n", "Em órbita! \n"};
         typingMessages(distancies);
         System.out.println("Distância percorrida: 144.000.000 milhões de quilometros");
         System.out.println("Agora estamos há 6 milhões de quilometros do Sol\n");
@@ -223,22 +223,22 @@ public class Message {
         timing();
         System.out.println("""               
                                     Este é o Sol!
-                                    
+                
                       Seu diâmetro é de 1.392.000 km
                       Sua temperatura é de 5.500 ºC
                       É uma estrela de categoria: Anã amarela
                       Ele é uma estrela considerada de meia-idade
                       Dentro dele, caberiam cerca de 1.3 milhões de planetas Terra
-                      
+                
                       Reza uma lenda que o Sol tem uma irmã gêmea chamada 'Nêmesis'
                       que está em longa órbita e quando entra no Sistema Solar, causa
                       uma pertubação nas órbitas. Mas como dito, é apenas uma lenda.
-                            
+                
                 """);
     }
 
-    public static void timing(){
-        try{
+    public static void timing() {
+        try {
             Thread.sleep(2500);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
