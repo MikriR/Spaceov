@@ -38,6 +38,7 @@ Para garantir organização e foco, o projeto seguiu um cronograma rigoroso:
 - Implementação dos conceitos de POO.
 
 **15/06 a 22/06** — Qualidade e Validação
+
 Período dedicado exclusivamente à refatoração, correção de bugs e realização de testes, visando garantir a robustez, a legibilidade e a manutenibilidade da aplicação.
 
 **• Refatoração**
