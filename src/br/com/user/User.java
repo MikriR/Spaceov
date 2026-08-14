@@ -6,12 +6,11 @@ public class User {
     private static final Scanner readerDatesUser = new Scanner(System.in);
 
     public static int numberChoice(){
-        int numberChoices = readerDatesUser.nextInt();
-        return numberChoices;
+
+        return readerDatesUser.nextInt();
     }
     public static String wordChoice(){
-        String wordChoices = readerDatesUser.nextLine();
-        return wordChoices;
+        return readerDatesUser.nextLine();
     }
     public static void bufferClean(){
         readerDatesUser.nextLine();
