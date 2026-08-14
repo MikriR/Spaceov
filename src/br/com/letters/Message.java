@@ -122,8 +122,7 @@ public class Message {
 
     public static String exhibitQuestion(int questionIndex) {
         System.out.println(Questions.getGameQuestions().get(questionIndex));
-        String choiceQuestion = User.wordChoice();
-        return choiceQuestion;
+        return User.wordChoice();
     }
 
     public static void noRepeatQuestion() {
@@ -172,8 +171,7 @@ public class Message {
     public static String countDownPermission() {
         timing();
         System.out.println(Questions.getGameQuestions().get(2));
-        String permissionChoice = User.wordChoice();
-        return permissionChoice;
+        return User.wordChoice();
     }
 
     public static void typingMessages(String[] messageTyped) {
@@ -191,8 +189,7 @@ public class Message {
     }
 
     public static String yesChoice() {
-        String variations = "Sim";
-        return variations;
+        return "Sim";
     }
 
     public static void countDown() {
@@ -205,8 +202,7 @@ public class Message {
         System.out.println("Uma viagem espacial é mágica!\n" +
                 "E por isso, aceitamos somente SIM como resposta.\n\n" +
                 Questions.getGameQuestions().get(2));
-        String permissionChoice = User.wordChoice();
-        return permissionChoice;
+        return User.wordChoice();
     }
 
     public static void toSun() {
